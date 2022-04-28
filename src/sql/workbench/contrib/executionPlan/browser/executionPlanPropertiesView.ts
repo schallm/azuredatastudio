@@ -11,6 +11,7 @@ import { removeLineBreaks } from 'sql/base/common/strings';
 import { isString } from 'vs/base/common/types';
 import { textFormatter } from 'sql/base/browser/ui/table/formatters';
 import { ExecutionPlanPropertiesViewBase, PropertiesSortType } from 'sql/workbench/contrib/executionPlan/browser/executionPlanPropertiesViewBase';
+import { LongTextViewer } from 'sql/base/browser/ui/table/editors/LongTextViewer';
 
 export class ExecutionPlanPropertiesView extends ExecutionPlanPropertiesViewBase {
 	// Div that holds the name of the element selected
@@ -91,7 +92,7 @@ export class ExecutionPlanPropertiesView extends ExecutionPlanPropertiesViewBase
 				name: localize('nodePropertyViewNameNameColumnHeader', "Name"),
 				field: 'name',
 				width: 250,
-				editor: Slick.Editors.Text,
+				editor: LongTextViewer,
 				headerCssClass: 'prop-table-header',
 				formatter: textFormatter
 			},
@@ -100,7 +101,7 @@ export class ExecutionPlanPropertiesView extends ExecutionPlanPropertiesViewBase
 				name: localize('nodePropertyViewNameValueColumnHeader', "Value"),
 				field: 'value',
 				width: 250,
-				editor: Slick.Editors.Text,
+				editor: LongTextViewer,
 				headerCssClass: 'prop-table-header',
 				formatter: textFormatter
 			}

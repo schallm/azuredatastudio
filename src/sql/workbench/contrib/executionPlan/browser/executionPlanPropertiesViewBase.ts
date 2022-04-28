@@ -90,7 +90,8 @@ export abstract class ExecutionPlanPropertiesViewBase {
 		}, {
 			rowHeight: RESULTS_GRID_DEFAULTS.rowHeight,
 			forceFitColumns: true,
-			defaultColumnWidth: 120
+			defaultColumnWidth: 120,
+			editable: true
 		});
 		attachTableStyler(this._tableComponent, this._themeService);
 
